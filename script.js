@@ -142,7 +142,7 @@ function formRemoveError(input){
 });
 
 function changeImg(){
-    let images = [ '/img/hero2.png','/img/hero1.png', '/img/hero3.png', '/img/hero4.png'];
+    let images = [ './img/hero2.png','./img/hero1.png', './img/hero3.png', './img/hero4.png'];
     let hero = document.querySelector('.hero');
     let image = Math.floor( Math.random() * images.length );
     return hero.innerHTML = `<img src="${images[image]}" alt="logo" class="hero_active heroArr">`;
