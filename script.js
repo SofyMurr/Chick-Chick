@@ -8,11 +8,11 @@ simulateTouch: true,
  enabled: true,
  slidesOffsetAfter:0,
  initialSlide: 0,
- spaceBetween:10,
+
 
  breakpoints: {
     0:{
-        slidesPerView: 1.1,  
+        slidesPerView: 1.1, 
     },
     425:{
         slidesPerView: 1.5,
@@ -108,7 +108,6 @@ async function formSend(e){
         }
     }
     else{
-        alert('Заполните обязательные поля');
         form.classList.remove('_sending');
     }
 }
