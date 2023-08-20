@@ -110,20 +110,24 @@ async function formSend(e){
     e.preventDefault();
     
     let error = formValidate(form);
-    let formData = new FormData(form);
+    // let formData = new FormData(form);
+    
 
     if(error === 0){
         form.classList.add('_sending');
-        let response = await fetch('sendmail.php', {
-            method: 'POST',
-            body: formData,
-        });
-        if(response.ok){
-            let result = await response.json();
-            alert(result.message);
-            form.reset();
-            form.classList.remove('_sending');
-        }
+        setTimeout(()=> {
+            return send();
+        }, "1000");
+        // let response = await fetch('sendmail.php', {
+        //     method: 'POST',
+        //     body: formData,
+        // });
+        // if(response.ok){
+        //     let result = await response.json();
+        //     alert(result.message);
+        //     form.reset();
+        //     form.classList.remove('_sending');
+        // }
     }
     else{
         form.classList.remove('_sending');
@@ -155,6 +159,15 @@ input.classList.add('_error');
 function formRemoveError(input){
     input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
+}
+
+function send(){
+    let message = document.querySelector('.popup__title');
+    let messageImage = document.querySelector('.messageImage');
+    form.classList.remove('_sending');
+    form.style.cssText = `opacity:0;`;
+    message.textContent = 'Мы перезвоним Вам для подтверждения записи';
+    messageImage.classList.add('active');
 }
 });
 
