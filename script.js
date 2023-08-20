@@ -4,42 +4,60 @@ simulateTouch: true,
  touchRatio:1,
  touchAngle:45,
  grabCursor: true,
- grabCursor: true,
  enabled: true,
  slidesOffsetAfter:0,
  initialSlide: 0,
-
-
  breakpoints: {
     0:{
-        slidesPerView: 1.1, 
+        slidesPerView: 1.3, 
+        grid: {
+            rows:1,
+        },
+    },
+    375:{
+        slidesPerView: 1.5,
+        grid: {
+            rows:1,
+        },
     },
     425:{
-        slidesPerView: 1.5,
+        slidesPerView: 1.6,
+        grid: {
+            rows:1,
+        },
+    },
+    675:{
+        slidesPerView: 2.7,
+        grid: {
+            rows:1,
+        },
     },
     768:{
-        slidesPerView:2.1,
+        slidesPerView:2.2,
+        grid: {
+            rows:1,
+        },
     },
     1024:{
-        slidesPerView: 2.2,
+        slidesPerView: 2.7,
         grid: {
             rows:2,
         },
     },
     1366:{
-        slidesPerView: 2.5,
+        slidesPerView: 3.3,
         grid: {
             rows:2,
         },
     },
     1440:{
-        slidesPerView:3,
+        slidesPerView:3.5,
         grid: {
             rows:2,
         },
     },
     1920:{
-        slidesPerView:3,
+        slidesPerView:3.3,
         grid: {
             rows:2,
         },
